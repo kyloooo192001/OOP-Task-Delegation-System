@@ -188,9 +188,9 @@ private void clearTaskFields() {
             }
         });
 
-        jcbAssignedTo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcbAssignedTo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
 
-        jcbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PENDING", "IN-PROGRESS", "DONE", "ASSIGNED" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

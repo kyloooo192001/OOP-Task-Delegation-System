@@ -131,7 +131,7 @@ public class ViewAllTask extends java.awt.Frame {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
      AdminDashboard admin = new AdminDashboard();
      admin.setLocationRelativeTo(null);
-     admin.setVisible(true);
+     admin.setVisible(true);   
      this.dispose();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
