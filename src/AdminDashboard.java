@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 import Model.Account;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ASUS
@@ -114,15 +115,33 @@ public class AdminDashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbManageMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbManageMemberActionPerformed
-        // TODO add your handling code here:
+    ManageMember manageMemberFrame = new ManageMember();
+    manageMemberFrame.setLocationRelativeTo(this); 
+    manageMemberFrame.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_jbManageMemberActionPerformed
 
     private void JBManageTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBManageTaskActionPerformed
-        // TODO add your handling code here:
+    ManageTask task = new ManageTask();
+    task.setLocationRelativeTo(null);
+    task.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_JBManageTaskActionPerformed
 
     private void JBLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBLogoutActionPerformed
-        // TODO add your handling code here:
+    int choice = JOptionPane.showConfirmDialog(
+            this,
+            "Are you sure you want to log out?",
+            "Confirm Logout",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE);
+
+    if (choice == JOptionPane.YES_OPTION) {
+        Login login = new Login();
+        login.setLocationRelativeTo(this);
+        login.setVisible(true);
+        this.dispose();
+    }
     }//GEN-LAST:event_JBLogoutActionPerformed
 
     /**

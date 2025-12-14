@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 import Model.Account;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ASUS
@@ -11,9 +12,6 @@ public class MemberDashboard extends javax.swing.JFrame {
     
     public Account LogInAccount;
 
-    /**
-     * Creates new form MemberDashboard
-     */
     public MemberDashboard() {
         initComponents();
     }
@@ -113,7 +111,19 @@ public class MemberDashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JBLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBLogoutActionPerformed
-        // TODO add your handling code here:
+         int choice = JOptionPane.showConfirmDialog(
+            this,
+            "Are you sure you want to log out?",
+            "Confirm Logout",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE);
+
+    if (choice == JOptionPane.YES_OPTION) {
+        Login login = new Login();
+        login.setLocationRelativeTo(this);
+        login.setVisible(true);
+        this.dispose();
+    }
     }//GEN-LAST:event_JBLogoutActionPerformed
 
     private void jbViewMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbViewMemberActionPerformed

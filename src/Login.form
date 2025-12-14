@@ -58,9 +58,9 @@
                   <Component id="txtPassword" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jbLogin" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="JbCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JbCancel" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="23" max="32767" attributes="0"/>
           </Group>

@@ -4,9 +4,11 @@
  */
 package DAO;
 
+import java.sql.PreparedStatement;
 import Model.Account;
 import Connection.DBConnection;
 import java.sql.*;
+import java.sql.SQLException;
 /**
  *
  * @author ASUS
@@ -46,7 +48,13 @@ public class AccountDAO {
             ps.executeUpdate();
         }
     }
-
-    // update, delete, search methods can follow same pattern
-    
+    public void deleteByUsername(String username) throws SQLException {
+    String sql = "DELETE FROM Accounts WHERE username = ?";
+    try (Connection conn = DBConnection.getConnection();
+         PreparedStatement ps = conn.prepareStatement(sql)) {
+        ps.setString(1, username);
+        ps.executeUpdate();
+    }
+}
+ 
 }
